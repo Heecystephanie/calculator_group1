@@ -5,7 +5,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #290FBA;
+  background-color: #161616;
   font-family: sans-serif;
 }
 
@@ -58,7 +58,7 @@ button {
 }
 
  #clear {
-  background: #150e56;
+  background: #FF2626;
   color: white;
 }
 
