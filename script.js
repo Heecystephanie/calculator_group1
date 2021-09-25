@@ -6,18 +6,22 @@ buttons.forEach(function(button) {
   button.addEventListener('click', calculate);
 });
 function calculate(event) {
-  const clickedButtonValue = event.target.value;
-
+  let clickedButtonValue = event.target.value;
+  const values = [...display.value]
   if (clickedButtonValue === '=') {
    
     if (display.value !== '') {
-     
       display.value = eval(display.value);
     }
     
      } else if (clickedButtonValue === 'C') {
    display.value = '';
-  } else {
+  }
+  else if((values.indexOf("+") > 0 || values.indexOf('-') > 0 || values.indexOf('/') > 0 || values.indexOf('*') > 0) && (clickedButtonValue === "+" 
+  || clickedButtonValue === '-' || clickedButtonValue === '*' || clickedButtonValue === '/')) {
+    return
+  }
+  else {
     display.value += clickedButtonValue;
   }
 }
